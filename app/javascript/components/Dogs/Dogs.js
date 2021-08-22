@@ -40,7 +40,7 @@ const Dogs = () => {
 
   useEffect(() => {
     axios.get('/api/v1/dogs.json')
-      .then( resp =>  setDogs(resp.data.data))
+      .then( resp => setDogs(resp.data.data))
       .catch( resp => console.log(resp) )
   }, [dogs.length])
 

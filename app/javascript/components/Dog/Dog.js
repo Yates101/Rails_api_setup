@@ -7,16 +7,15 @@ const Dog = (props) => {
 
   useEffect(() => {
     const slug = props.match.params.slug
-    const url = `api/v1/dogs/${slug}`
     
-    axios.get(url)
+    axios.get(`/api/v1/dogs/${slug}`)
     .then( resp => console.log(resp))
     .catch( resp => console.log(resp))
   }, [])
 
   return (
     <div>
-      This is the Dogs#show view for out app.
+      this is the dog#show
     </div>
   )
 }
